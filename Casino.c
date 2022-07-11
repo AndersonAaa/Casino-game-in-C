@@ -74,8 +74,16 @@ int main () {
             printf("\nRemeber!!! You have $%f", cash); 
             
             //Choose the horse randomly
-            int horses = rand() %8; 
-
+            //The value of horse can not be 0
+            int flag = 0; 
+            int horse; 
+            while (flag == 0)
+            {
+                horse = rand() &2;
+                if(horse != 0){
+                    flag = 1;
+                }
+            }
             int horseid = 0;
 
             //Validates if the user is typing a valid amount of money
@@ -123,8 +131,32 @@ int main () {
 
         }else if(op == 2){
 
+            printf("\n ,-----.         ,--.               ,---. ,--. ,--.                 ,--.                      ");
+            printf("\n'  .--./  ,---.  `--' ,--,--,      /  .-' |  | `--'  ,---.   ,---.  `--' ,--,--,   ,---.      ");
+            printf("\n|  |     | .-. | ,--. |      |     |  `-, |  | ,--. | .-. | | .-. | ,--. |      | | .-. |     ");
+            printf("\n'  '--'| ' '-' ' |  | |  ||  |     |  .-' |  | |  | | '-' ' | '-' ' |  | |  ||  | ' '-' '     ");
+            printf("\n `-----'  `---'  `--' `--''--'     `--'   `--' `--' |  |-'  |  |-'  `--' `--''--' .`-  /      ");
+            printf("\n                                                    `--'    `--'                  `---'       ");
 
-            //Validate if the user is typing a valid amount of money
+            printf("\nWelcome to Coin Flipping!!\nThe game consists that you have to choose one option, face or tale. Then the program will flip the coin and give you de answer\nIf you will, you will the the double of the money you've bet, but if you fail, you will lose everything :(");
+            printf("\nRemeber!!! You have $%f", cash); 
+
+            //Declare the variables of the game
+
+            //The value of coin can not be 0
+            int flag = 0; 
+            int coin; 
+            while (flag == 0)
+            {
+                coin = rand() &2;
+                if(coin != 0){
+                    flag = 1;
+                }
+            }
+            
+            int coinid;  
+
+            //Validates if the user is typing a valid amount of money
             int opRPS1 = 0;
             while(opRPS1 == 0){ 
                 printf("\nHow much do you want to bet? ");
@@ -139,11 +171,36 @@ int main () {
                     opRPS1 = 1;
                 }
             }
+            
+            //Validates if the user types a valid nomber
+            int oph2 = 0;
+            while (oph2 == 0)
+            {
+                printf("\nFace or tail?\nFace: 1, Tail: 2\nEnter: ");
+                scanf("%d", &coinid);
 
+                if(coinid>0 && coinid<=2){
+                    oph2 = 1;
+                }else{
+                    printf("\nEnter a valid number\n");
+                }
+            }
+
+            //Validates the winner 
+            if(coin == coinid){
+                printf("\nCongratulations!!!! You've won!!\n");
+                cash = cash + bet*2; 
+            }else{
+                printf("\nBetter luck next time pal :( %d", coin);
+                cash = cash - bet; 
+            }
+
+            //End of the game!!
             
         }else if(op == 3){
 
-            //Validate if the user is typing a valid amount of money
+
+            //Validates if the user is typing a valid amount of money
             int opC1 = 0;
             while(opC1 == 0){ 
                 printf("\nHow much do you want to bet? ");
@@ -165,4 +222,4 @@ int main () {
 
 
     }
-}
+}   
