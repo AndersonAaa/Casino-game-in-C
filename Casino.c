@@ -86,7 +86,7 @@ int main () {
 
                 if(bet > cash){
                     printf("\nYou dont't have that money pal :/ try it again\n");
-                }else if(bet < 0){
+                }else if(bet < 0 || bet == 0){
                     printf("\nC'mon man, dont't ask me for money\n");
                 }else{
                     printf("\nAlrigth then...\n");
@@ -110,8 +110,7 @@ int main () {
                 }
             }
 
-
-
+            //Validates the winner 
             if(horses == horseid){
                 printf("\nCongratulations!!!! You've won!!\n");
                 cash = cash + bet; 
@@ -121,8 +120,6 @@ int main () {
             }
 
             //End of the game!!
-
-
 
         }else if(op == 2){
 
@@ -135,7 +132,7 @@ int main () {
 
                 if(bet > cash){
                     printf("You dont't have that money pal :/ try it again");
-                }else if(bet < 0){
+                }else if(bet < 0 || bet ==0){
                     printf("C'mon man, dont't ask me for money");
                 }else{
                     printf("Alrigth then...");
@@ -154,7 +151,7 @@ int main () {
 
                 if(bet > cash){
                     printf("You dont't have that money pal :/ try it again");
-                }else if(bet < 0){
+                }else if(bet < 0 || bet == 0){
                     printf("C'mon man, dont't ask me for money");
                 }else{
                     printf("Alrigth then...");
