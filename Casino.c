@@ -119,11 +119,11 @@ int main () {
             }
 
             //Validates the winner 
-            if(horses == horseid){
+            if(horse == horseid){
                 printf("\nCongratulations!!!! You've won!!\n");
                 cash = cash + bet; 
             }else{
-                printf("\nBetter luck next time pal :(, the winner horse was the number %d\n", horses);
+                printf("\nBetter luck next time pal :(, the winner horse was the number %d\n", horse);
                 cash = cash - bet; 
             }
 
@@ -200,6 +200,19 @@ int main () {
         }else if(op == 3){
 
 
+			int choose; 
+			int machine; 
+			
+			printf(",------.              ,--.        ,------.                                   ,---.        ,--.                             \n");
+			printf("|  .--. ' ,---.  ,---.|  |,-.     |  .--. ' ,--,--. ,---.  ,---. ,--.--.    '   .-'  ,---.`--' ,---.  ,---.  ,---. ,--.--. \n");
+			printf("|  '--'.'| .-. || .--'|     /     |  '--' |' ,-.  || .-. || .-. :|  .--'    `.  `-. | .--',--.(  .-' (  .-' | .-. ||  .--' \n");
+			printf("|  ||  | ' '-' '| `--.|  |  |     |  | --' | '-'  || '-' '|   --.|  |       .-'    || `--.|  |.-'  `).-'  `)' '-' '|  |    \n");
+			printf("`--' '--' `---'  `---'`--'`--'    `--'      `--`--'|  |-'  `----'`--'       `-----'  `---'`--'`----' `----'  `---' `--'    \n");
+			printf("                                                   `--'                                                                    \n");
+			
+			
+			print("Well you know how it works. \n1. Rock\n2. Paper\n3. Scissors\n Enter a valid number");
+			
             //Validates if the user is typing a valid amount of money
             int opC1 = 0;
             while(opC1 == 0){ 
@@ -215,6 +228,9 @@ int main () {
                     opC1 = 1;
                 }
             }
+            
+            
+            
 
         }else{
             flag = 0;
